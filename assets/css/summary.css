@@ -14,13 +14,13 @@ summary {
 }
 
 .twisties { /*moved out the twistie title to own class to break main.css*/
-    font-size: 20px;
+    font-size: 130%;
     font-weight: bold;
     color: #cccbcb;
 }
 
 .subtwisties { /*moved out the twistie title to own class to break main.css*/
-    font-size: 17px;
+    font-size: 115%;
     font-weight: bold;
     color: #cccbcb;
     padding-left: 2%;
