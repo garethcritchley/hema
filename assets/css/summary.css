@@ -1,0 +1,61 @@
+/*
+	Rebuild of laggy expanders from https://stackoverflow.com/questions/66813986/accordion-using-summary-and-details-tags-how-to-open-slowly
+*/
+
+
+summary {
+    
+    padding: 15px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    margin-bottom: 20px;
+
+    transition: all 0.5s ease;
+}
+
+.twisties { /*moved out the twistie title to own class to break main.css*/
+    font-size: 20px;
+    font-weight: bold;
+    color: #cccbcb;
+}
+
+.subtwisties { /*moved out the twistie title to own class to break main.css*/
+    font-size: 17px;
+    font-weight: bold;
+    color: #cccbcb;
+}
+
+summary:hover {
+    background: #055ba7a6;
+    cursor: pointer;
+}
+
+details[open] summary {
+    border-right: none;
+    border-left: none;
+}
+summary::-webkit-details-marker {
+   display: none;
+}
+
+summary::before {
+    margin-right: 10px;
+    padding-right: 0;
+    transform: rotate(90deg);
+    display: inline-block;
+    background: #4d4d4d;
+    padding: 5px;
+    color: #358ad4;
+}
+summary:hover::before {
+    color: #cfe1f1;
+}
+
+details[open] summary ~ * {
+  animation: sweep .8s ease-in-out;
+}
+
+@keyframes sweep {
+  0%    {opacity: 0;}
+  100%  {opacity: 1;}
+}
