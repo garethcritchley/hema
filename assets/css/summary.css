@@ -23,6 +23,7 @@ summary {
     font-size: 17px;
     font-weight: bold;
     color: #cccbcb;
+    padding-left: 2%;
 }
 
 summary:hover {
