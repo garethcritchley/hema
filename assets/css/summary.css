@@ -4,12 +4,10 @@
 
 
 summary {
-    
     padding: 15px;
     border: 1px solid #ccc;
     cursor: pointer;
     margin-bottom: 20px;
-
     transition: all 0.5s ease;
 }
 
@@ -18,23 +16,47 @@ summary {
     font-weight: bold;
     color: #cccbcb;
 }
-
 .subtwisties { /*moved out the twistie title to own class to break main.css*/
     font-size: 115%;
     font-weight: bold;
     color: #cccbcb;
     padding-left: 2%;
+    list-style-image: url(/images/Screenshot1.png);
 }
 
+
+
+details>summary {
+  list-style-image: url(/images/Screenshot1.png);
+}
+details[open] summary {
+    list-style-image: url(/images/Screenshot2.png);
+}
+
+/*sword flippy*/
+details>summary {
+  list-style-image: url(/images/Screenshot1.png);
+}
+details {
+  border: 1px solid gray;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+}
+details[open] summary {
+    list-style-image: url(/images/Screenshot2.png);
+}
+details[open]>summary {
+  margin-bottom: 0.5rem;
+}
+/*end sword flippy*/
+
+
 summary:hover {
-    background: #055ba7a6;
+    background: #21425fa6;
     cursor: pointer;
 }
 
-details[open] summary {
-    border-right: none;
-    border-left: none;
-}
+
 summary::-webkit-details-marker {
    display: none;
 }
