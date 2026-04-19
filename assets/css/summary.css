@@ -14,47 +14,39 @@ summary {
 .twisties { /*moved out the twistie title to own class to break main.css*/
     font-size: 130%;
     font-weight: bold;
+    text-decoration-line: underline;
     color: #cccbcb;
 }
 .subtwisties { /*moved out the twistie title to own class to break main.css*/
     font-size: 115%;
     font-weight: bold;
+    text-decoration-line: underline;
     color: #cccbcb;
     padding-left: 2%;
     list-style-image: url(/images/Screenshot1.png);
 }
 
 
-
-details>summary {
-  list-style-image: url(/images/Screenshot1.png);
-}
-details[open] summary {
-    list-style-image: url(/images/Screenshot2.png);
-}
-
-/*sword flippy*/
-details>summary {
-  list-style-image: url(/images/Screenshot1.png);
-}
-details {
-  border: 1px solid gray;
-  border-radius: 0.2rem;
-  padding: 0.5rem;
-}
-details[open] summary {
-    list-style-image: url(/images/Screenshot2.png);
-}
-details[open]>summary {
-  margin-bottom: 0.5rem;
-}
-/*end sword flippy*/
-
-
 summary:hover {
     background: #21425fa6;
     cursor: pointer;
 }
+
+/*sword flippy*/
+
+details>summary.twisties {
+  list-style-image: url(/images/Screenshot1.png);
+}
+details[open] summary.twisties {
+    list-style-image: url(/images/Screenshot2.png);
+}
+details[open] > summary.subtwisties {
+  list-style-image: url(/images/Screenshot2.png);
+}
+
+
+  /*end sword flippy*/
+
 
 
 summary::-webkit-details-marker {
