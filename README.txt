@@ -33,4 +33,9 @@ Credits:
 
 
 
+Bloßfechten
+Blossfechten
 
+harnischfecten
+harnischfechten
+Harnishfectern
