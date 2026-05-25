@@ -13,6 +13,10 @@
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
 	<script src="https://kit.fontawesome.com/59e6827526.js" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
 </head>
 
 <body class="is-preload">
@@ -36,7 +40,8 @@
 					<li><a href="index.html">Home</a></li>
 					<li><a href="harnishfecten.html">Harnishfecten</a></li>
 					<li><a href="blossfecten.html">Blossfecten</a></li>
-					<li><a href="https://ridingwithsticks.com.au/index.html#/">Rossfecten <i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i></a></li>
+					<li><a href="https://ridingwithsticks.com.au/index.html#/">Rossfecten <i
+								class="fa-solid fa-arrow-up-right-from-square fa-xs"></i></a></li>
 					<li><a href="classes.html">Classes & Resources</a></li>
 					<li><a href="fight-like-a-girl.html">Fight Like a Girl</a></li>
 					<li><a href="rules.html">SoAA Rules</a></li>
@@ -132,7 +137,8 @@
 						<article>
 							<a href="rules.html" class="image"><img src="images/daggers-1.png" alt="" /></a>
 							<h3 class="major">SoAA Rules</h3>
-							<p>The SoAA Rules as they pertain to Competitor Behaviour, Equipment (Armour and Weapons), Combat and Scoring</p>
+							<p>The SoAA Rules as they pertain to Competitor Behaviour, Equipment (Armour and Weapons),
+								Combat and Scoring</p>
 							<a href="rules.html" class="special">Learn more</a>
 						</article>
 						<article>
@@ -155,7 +161,7 @@
 					the beginning of each term free of charge while you decide if you want to join the school.</p>
 				<p>Please let us know beforehand if you intend to come, as space is limited.</p>
 
-				<form method="post" action="#">
+				<form>
 					<picture>
 						<source media="(max-width: 600px)" srcset="images/sword-and-book-1.jpg">
 						<!-- GARETH make mobile version -->
@@ -163,46 +169,83 @@
 						<img src="images/sword-and-book-1.jpg" alt="sword and book" width="400" height="400">
 					</picture>
 					<ul>
-						<i class="fa-brands fa-facebook"></i><a href="https://www.facebook.com/profile.php?id=100057613781187"> Message us on Facebook</a></li><br>
+						<i class="fa-brands fa-facebook"></i><a
+							href="https://www.facebook.com/profile.php?id=100057613781187"> Message us on Facebook</a>
+						</li><br>
 						<i class="fa-solid fa-location-dot"></i> Weston Creek, Canberra:<br>
-						<i class="fa-regular fa-map"></i> <a href="https://www.google.com/maps/place/Mount+Stromlo+High+School/@-35.354705,149.0516136,17z/data=!3m1!4b1!4m6!3m5!1s0x6b17b459b0d76801:0x4ad029c4b05019ef!8m2!3d-35.3547094!4d149.0541885!16s%2Fm%2F04p__zl?entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D">Monday: Stromlo High School</a><br />
-						<i class="fa-regular fa-map"></i> <a href="https://www.google.com/maps/place/Weston+Creek+Community+Centre/@-35.3417104,149.0510169,17z/data=!3m1!4b1!4m6!3m5!1s0x6b17b4615b8af89d:0xbd125f13ae950b51!8m2!3d-35.3417148!4d149.0535918!16s%2Fg%2F11gj4pzp_1?entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D">Wednesday: Weston Creek Community Centre</a><br/></li>
-					
+						<i class="fa-regular fa-map"></i> <a
+							href="https://www.google.com/maps/place/Mount+Stromlo+High+School/@-35.354705,149.0516136,17z/data=!3m1!4b1!4m6!3m5!1s0x6b17b459b0d76801:0x4ad029c4b05019ef!8m2!3d-35.3547094!4d149.0541885!16s%2Fm%2F04p__zl?entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D">Monday:
+							Stromlo High School</a><br />
+						<i class="fa-regular fa-map"></i> <a
+							href="https://www.google.com/maps/place/Weston+Creek+Community+Centre/@-35.3417104,149.0510169,17z/data=!3m1!4b1!4m6!3m5!1s0x6b17b4615b8af89d:0xbd125f13ae950b51!8m2!3d-35.3417148!4d149.0535918!16s%2Fg%2F11gj4pzp_1?entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D">Wednesday:
+							Weston Creek Community Centre</a><br /></li>
+
 					</ul>
 				</form>
 
+				<!-- FORM -->
+				 
 				<ul class="contact">
-					
-							
-							<div class>
-								<label for="name">Name</label>
-								<input type="text" name="demo-name" id="name" value="" />
+					<div class="form-container">
+						<form id="submit-to-google-sheet">
+							<div class="form-group">
+								<label for="name">Name:</label>
+								<input class="form-control" type="text" name="name" id="name" required />
 							</div>
-							<div class="col-6 col-12-xsmall">
-								<label for="email">Email</label>
-								<input type="email" name="email" id="email" value="" />
+
+
+							<div class="form-group">
+								<label for="email">Email:</label>
+								<input class="form-control" type="email" name="email" id="email" required />
 							</div>
-							<div class="col-6 col-12-small">
-								<input type="checkbox" id="human" name="human" >
-								<label for="human">Not a robot</label>
+
+							<div class="form-group">
+								<label for="loc">Message:</label>
+								<textarea class="form-control" name="message" id="message" required>
+									</textarea>
 							</div>
-							<div class="col-12">
-								<label for="message">Message</label>
-								<textarea name="message" id="message" rows="6"></textarea>
+							<br>
+							<div class="form-group form-check mt-2">
+								<input class="form-check-input" type="checkbox" id="robot" required />
+								<label class="form-check-label" for="robot">I am not a robot</label>
 							</div>
-							<div>
-								<br>
-								<input class="button" value="Submit" onclick="test()">
-		
-							</div>
-						</ul>
-				
+
+							<button type="submit" class="btn btn-primary btn-block">
+								Submit
+							</button>
+
+						</form>
+					</div>
+
+					<script>
+						const scriptURL =
+							"https://script.google.com/macros/s/AKfycbwYl9v8u-O3r7KmWuMktAjDoUzI86Tm9V6e3b7kkzUi2I-LHZ6TygtCT_6zSTA8LUVJ/exec";
+						const form = document.forms["submit-to-google-sheet"];
+						form.addEventListener("submit", (e) => {
+							e.preventDefault();
+							var formData = new FormData(form);
+
+							fetch(scriptURL, { method: "POST", body: formData })
+								.then((response) => {
+									swal("Done", "Submitted Successfully.", "success");
+								})
+								.catch((error) => {
+									swal("Error", "Something went wrong. please try again!", "error");
+								});
+						});
+					</script>
+				</ul>
+
+
+
+
+
 
 
 				<ul class="copyright">
 					<li>&copy; Copyright 2026 - Present. All rights reserved.</li>
-					<li>Design: <a href="https://gareths.fyi/">This Goober</a> and <a
-							href="http://html5up.net">HTML5 UP</a></li>
+					<li>Design: <a href="https://gareths.fyi/">This Goober</a> and <a href="http://html5up.net">HTML5
+							UP</a></li>
 				</ul>
 
 			</div>
