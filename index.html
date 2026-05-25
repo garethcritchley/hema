@@ -3,7 +3,6 @@
 	Launch page
 -->
 <html>
-
 <head>
 	<title>School of Arms and Armour</title>
 	<meta charset="utf-8" />
@@ -13,7 +12,7 @@
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
 	<script src="https://kit.fontawesome.com/59e6827526.js" crossorigin="anonymous"></script>
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<!-- js for the popups -->
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
@@ -206,8 +205,7 @@
 
 				<ul class="copyright">
 					<li>&copy; Copyright 2026 - Present. All rights reserved.</li>
-					<li>Design: <a href="https://gareths.fyi/">This Goober</a> and <a href="http://html5up.net">HTML5
-							UP</a></li>
+					<li>Design: <a href="https://gareths.fyi/">This Goober</a> and <a href="http://html5up.net">HTML5 UP</a></li>
 				</ul>
 
 			</div>
@@ -215,31 +213,12 @@
 
 	</div>
 
-	<!-- Scripts -->
-	<script>
-		const scriptURL =
-			"https://script.google.com/macros/s/AKfycbwYl9v8u-O3r7KmWuMktAjDoUzI86Tm9V6e3b7kkzUi2I-LHZ6TygtCT_6zSTA8LUVJ/exec";
-		const form = document.forms["submit-to-google-sheet"];
-		form.addEventListener("submit", (e) => {
-			e.preventDefault();
-			var formData = new FormData(form);
-
-			fetch(scriptURL, { method: "POST", body: formData })
-				.then((response) => {
-					swal("Done", "Submitted Successfully.", "success");
-				})
-				.catch((error) => {
-					swal("Error", "Something went wrong. please try again!", "error");
-				});
-		});
-	</script>
-
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrollex.min.js"></script>
 	<script src="assets/js/browser.min.js"></script>
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script src="assets/js/contactus.js"></script>
 
 </body>
-
 </html>
