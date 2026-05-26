@@ -9,6 +9,10 @@
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
 	<script src="https://kit.fontawesome.com/59e6827526.js" crossorigin="anonymous"></script>
+	<!-- js for the popups -->
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
 </head>
 
 <body class="is-preload">
@@ -105,39 +109,65 @@
 					the beginning of each term free of charge while you decide if you want to join the school.</p>
 				<p>Please let us know beforehand if you intend to come, as space is limited.</p>
 
-				<form method="post" action="#">
-					<picture>
-						<source media="(max-width: 600px)" srcset="images/sword-and-book-1.jpg">
-						<!-- GARETH make mobile version -->
-						<source media="(min-width: 601px)" srcset="images/sword-and-book-1.jpg">
-						<img src="images/sword-and-book-1.jpg" alt="sword and book" width="400" height="400">
-					</picture>
-				</form>
+				<!-- FORM -->
 
-				<ul class="contact">
-					<li><i class="fa-brands fa-facebook"></i><a href="https://www.facebook.com/profile.php?id=100057613781187"> Message us on Facebook</a></li>
-					<li><i class="fa-solid fa-location-dot"></i> Weston Creek, Canberra:<br>
-						<i class="fa-regular fa-map"></i> <a href="https://www.google.com/maps/place/Mount+Stromlo+High+School/@-35.354705,149.0516136,17z/data=!3m1!4b1!4m6!3m5!1s0x6b17b459b0d76801:0x4ad029c4b05019ef!8m2!3d-35.3547094!4d149.0541885!16s%2Fm%2F04p__zl?entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D">Monday: Stromlo High School</a><br />
-						<i class="fa-regular fa-map"></i> <a href="https://www.google.com/maps/place/Weston+Creek+Community+Centre/@-35.3417104,149.0510169,17z/data=!3m1!4b1!4m6!3m5!1s0x6b17b4615b8af89d:0xbd125f13ae950b51!8m2!3d-35.3417148!4d149.0535918!16s%2Fg%2F11gj4pzp_1?entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D">Wednesday: Weston Creek Community Centre</a><br/></li>
-					<li><i class="fa-solid fa-at"></i><a href="contact@hemacanberra.org"> contact@hemacanberra.org</a></li>
+				<ul class="form">
+					<div class="form-container">
+						<form id="submit-to-google-sheet">
+							<div class="form-group">
+								<label for="name">Name:</label>
+								<input class="form-control" type="text" name="name" id="name" required />
+							</div>
+							<div class="form-group">
+								<label for="email">Email:</label>
+								<input class="form-control" type="email" name="email" id="email" required />
+							</div>
+
+							<div class="form-group">
+								<label for="loc">Message:</label>
+								<textarea class="form-control" name="message" id="message" required></textarea>
+							</div>
+							<br>
+							<div class="form-group form-check mt-2">
+								<input class="form-check-input" type="checkbox" id="robot" required />
+								<label class="form-check-label" for="robot">I am not a robot</label>
+							</div>
+							<button type="submit" class="btn btn-primary btn-block">
+								Submit
+							</button>
+						</form>
+					</div>
+					<br>
+					<div>
+						<i class="fa-brands fa-facebook"></i><a
+						href="https://www.facebook.com/profile.php?id=100057613781187"> Message us on Facebook</a>
+					</li><br>
+					<i class="fa-solid fa-location-dot"></i> Weston Creek, Canberra:<br>
+					<i class="fa-regular fa-map"></i> <a
+						href="https://www.google.com/maps/place/Mount+Stromlo+High+School/@-35.354705,149.0516136,17z/data=!3m1!4b1!4m6!3m5!1s0x6b17b459b0d76801:0x4ad029c4b05019ef!8m2!3d-35.3547094!4d149.0541885!16s%2Fm%2F04p__zl?entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D">Monday:
+						Stromlo High School</a><br />
+					<i class="fa-regular fa-map"></i> <a
+						href="https://www.google.com/maps/place/Weston+Creek+Community+Centre/@-35.3417104,149.0510169,17z/data=!3m1!4b1!4m6!3m5!1s0x6b17b4615b8af89d:0xbd125f13ae950b51!8m2!3d-35.3417148!4d149.0535918!16s%2Fg%2F11gj4pzp_1?entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D">Wednesday:
+						Weston Creek Community Centre</a><br /></li>
+					</div>
 				</ul>
 
 				<ul class="copyright">
 					<li>&copy; Copyright 2026 - Present. All rights reserved.</li>
-					<li>Design: <a href="https://gareths.fyi/">This Goober</a> and <a
-							href="http://html5up.net">HTML5 UP</a></li>
+					<li>Design: <a href="https://gareths.fyi/">This Goober</a> and <a href="http://html5up.net">HTML5 UP</a></li>
 				</ul>
+
 			</div>
 		</section>
 
 	</div>
 
-	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrollex.min.js"></script>
 	<script src="assets/js/browser.min.js"></script>
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script src="assets/js/contactus.js"></script>
 
 </body>
 
