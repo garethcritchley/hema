@@ -350,7 +350,35 @@ input, select, textarea {
 		text-align: right;
 	}
 
-/* Row */
+
+/* boxing */
+
+	@media screen and (min-width: 1280px) {
+		.container {
+			display: flex;
+			justify-content: space-between;
+		}
+
+
+		.left {
+			flex: 1;
+			padding: 20px;
+		}
+
+		.right {
+			flex: 1;
+			padding: 20px;
+		}
+
+	}
+
+
+
+
+
+
+
+	/* Row */
 
 	.row {
 		display: flex;
