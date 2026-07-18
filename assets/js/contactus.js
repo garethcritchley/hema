@@ -1,6 +1,6 @@
 // replace this with the google app script address for the proper sheet,,,,
 const scriptURL =                       
-"https://script.google.com/macros/s/AKfycbzPhOr2H_LAAqVdSaIHe00xo_hSxnoLMyJSf6qNzCz--eAQ5XFQBbhrF33UKIPm3mAe/exec";
+"https://script.google.com/macros/s/AKfycby11TG8ch-rUHn1SDL5thT1FJsdchWWTiVciLky2zgdRdVpHw6rM2xnOE49SIS2QW-x/exec";
 const form = document.forms["submit-to-google-sheet"];
 form.addEventListener("submit", (e) => {
     e.preventDefault();
